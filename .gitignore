@@ -10,6 +10,7 @@ node_modules
 .netlify
 .wrangler
 dist
+.vite
 
 # VS Code Devcontainer
 .devcontainer/*
@@ -39,3 +40,6 @@ vite.config.ts.timestamp-*
 package-lock.json
 yarn.lock
 .pnpm-debug.log
+
+# Cache
+.eslintcache
