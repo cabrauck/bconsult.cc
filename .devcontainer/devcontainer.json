@@ -1,0 +1,29 @@
+{
+  "name": "SvelteKit Devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "ms-azuretools.vscode-docker",
+        "GitHub.copilot",
+        "github.vscode-pull-request-github"
+      ]
+    }
+  },
+  "forwardPorts": [5173],
+  "postCreateCommand": "[ -f package.json ] && corepack enable && corepack prepare pnpm@latest --activate && pnpm install || echo 'No package.json – skipping install'",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "remoteUser": "node"
+}
